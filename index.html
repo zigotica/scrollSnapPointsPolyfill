@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS scroll Snap Points Polyfill example</title>
+    <link href="css-scroll-snap-points.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>CSS scroll Snap Points example</h1>
+    <p>You browser <span id="detection-support">supports</span> CSS scroll Snap Points Module.</p>
+
+    <h2>Horizontal example</h2>
+    <div id="g1" class="gallery-wrapper horizontal-gallery">
+        <div class="gallery">
+            <div class="box"><img src="imgs/1.jpg" alt="Reading by the Bay" width="300" height="200"></div>
+            <div class="box"><img src="imgs/2.jpg" alt="Ready, Steady, Go" width="300" height="200"></div>
+            <div class="box"><img src="imgs/3.jpg" alt="By the pool" width="300" height="200"></div>
+            <div class="box"><img src="imgs/4.jpg" alt="Orchard Road" width="300" height="200"></div>
+            <div class="box"><img src="imgs/5.jpg" alt="Singapore at night" width="300" height="200"></div>
+        </div>
+    </div>
+
+    <h2>Vertical example</h2>
+    <div id="g2" class="gallery-wrapper vertical-gallery">
+        <div class="gallery">
+            <div class="box"><img src="imgs/1.jpg" alt="Reading by the Bay" width="300" height="200"></div>
+            <div class="box"><img src="imgs/2.jpg" alt="Ready, Steady, Go" width="300" height="200"></div>
+            <div class="box"><img src="imgs/3.jpg" alt="By the pool" width="300" height="200"></div>
+            <div class="box"><img src="imgs/4.jpg" alt="Orchard Road" width="300" height="200"></div>
+            <div class="box"><img src="imgs/5.jpg" alt="Singapore at night" width="300" height="200"></div>
+        </div>
+    </div>
+
+    <script src="css-scroll-snap-points-polyfill.js"></script>
+    <script>
+        var isScrollSnapSupported = 'scrollSnapType' in document.documentElement.style;
+
+        if(!isScrollSnapSupported) {
+            document.getElementById('detection-support').innerHTML = 'does not support';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    padding: 1em 0;
+}
+h2 {
+    font-size: 18px;
+    padding: 1em 0;
+}
+p {
+    font-size: 18px;
+    padding: 1em 0;
+}
+
+.gallery-wrapper {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.gallery {
+    width: 300px;
+    height: 200px;
+
+    -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
+}
+.horizontal-gallery .gallery {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    /* these avoid inline space between elements */
+    white-space: nowrap;
+    font-size: 0px;
+
+    -webkit-scroll-snap-points-x: repeat(100%);
+    scroll-snap-points-x: repeat(100%);
+}
+.vertical-gallery .gallery {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    -webkit-scroll-snap-points-y: repeat(100%);
+    scroll-snap-points-y: repeat(100%);
+}
+
+.box {
+    font-size: 14px;
+}
+.box img {
+    display: block;
+}
+.horizontal-gallery .box {
+    display: inline-block;
+
+    /* undo nowrap */
+    white-space: normal;
+}
+.vertical-gallery .box {
+    display: block;
+}
