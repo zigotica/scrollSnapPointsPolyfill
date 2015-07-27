@@ -51,8 +51,8 @@ p {
     overflow-x: hidden;
     overflow-y: auto;
 
-    -webkit-scroll-snap-points-y: repeat(100%);
-    scroll-snap-points-y: repeat(100%);
+    -webkit-scroll-snap-points-y: repeat(200px);
+    scroll-snap-points-y: repeat(200px);
 }
 
 .box {
