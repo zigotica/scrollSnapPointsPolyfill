@@ -1,18 +1,18 @@
 # scroll Snap Points Polyfill
 ===========================
 
-Tiny Javascript Pollyfill to simulate CSS scroll Snap Points in non-supporting browsers. 
+Tiny Javascript Pollyfill to simulate CSS scroll Snap Points in non-supporting browsers.
 
 
 ## Setup
 
-1. Include the script at the end of your HTML, it will autorun when DOM is ready. 
+1. Include the script at the end of your HTML, it will autorun when DOM is ready.
 2. Enjoy.
 
 ## Options
 
 ### Run after DOM injection
-You can also run the script manually. Usefull when you dynamically inject nodes into your document. 
+You can also run the script manually. Usefull when you dynamically inject nodes into your document.
 
 ```
 // your DOM injecton here
@@ -39,3 +39,7 @@ znapscroll.destroy();
 // then (limited to children of element with id=g1):
 znapscroll.destroy( document.getElementById('g1') );
 ```
+
+## Demo
+
+See [full working demo](http://zigotica.github.io/scrollSnapPointsPolyfill/)
